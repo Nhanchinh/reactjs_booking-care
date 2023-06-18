@@ -1,0 +1,75 @@
+.background-container {
+    width: 100vw;
+    height: 100vh;
+
+    background-image: linear-gradient(to right, rgb(227, 201, 201), rgb(164, 164, 215));
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+
+    .form-login-container {
+        padding: 16px;
+        width: 450px;
+        height: 550px;
+        background-image: linear-gradient(to right, rgb(244, 238, 238), rgb(247, 247, 252));
+
+        .form-content {
+
+
+
+            .content-input {
+                .input-content {
+                    padding: 4px;
+                }
+
+                .input-content {
+                    width: 100%;
+                }
+            }
+
+            .content-submit {
+                .btn-login {
+                    width: 90%;
+                    padding: 8px;
+                    color: white;
+                    font-size: 18px;
+                    background-image: linear-gradient(to right, rgb(227, 201, 201), rgb(164, 164, 215));
+                    border: none;
+                    border-radius: 15px;
+                }
+            }
+
+            .social-login {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .facebook {
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid black;
+                    border-radius: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 4px;
+                    cursor: pointer;
+                }
+
+                .google {
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid black;
+                    border-radius: 40px;
+                    display: flex;
+                    margin-left: 4px;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+}
