@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { push } from "connected-react-router";
-import handleLoginApi from '../../services/userService';
+import { handleLoginApi } from '../../services/userService';
 import * as actions from "../../store/actions"
 import { FormattedMessage } from 'react-intl';
 import "../Auth/Login.scss"
