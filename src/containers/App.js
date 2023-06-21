@@ -42,7 +42,7 @@ class App extends Component {
         return (
             <Fragment>
                 <Router history={history}>
-                    <div className="main-container">
+                    <div style={{ backgroundImage: "linear-gradient(to right, rgb(227, 201, 201), rgb(164, 164, 215));" }} className="main-container">
                         <ConfirmModal />
                         {this.props.isLoggedIn && <Header />}
 

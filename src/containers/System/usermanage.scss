@@ -14,3 +14,61 @@ th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+
+.Add-new-user {
+    button {
+        padding: 6px 14px;
+        background: #bb92c1;
+        color: white;
+        border: none;
+    }
+}
+
+.modal-header {
+    position: relative;
+
+    .modal-create-user-header {
+
+
+        b {}
+
+        span {
+            position: absolute;
+            right: 16px;
+            font-size: 26px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    row-gap: 30px;
+
+    .input-content {
+        width: 49%;
+        display: flex;
+        flex-direction: column;
+
+        &.langer {
+            width: 100%;
+        }
+
+
+
+        .header-input {
+            width: 100%;
+        }
+
+        .input-type {
+            width: 100%;
+            padding: 6px 4px;
+            outline: none;
+            border: 2px solid grey;
+        }
+    }
+}

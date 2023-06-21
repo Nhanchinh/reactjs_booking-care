@@ -3,12 +3,14 @@ import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import "./usermanage.scss"
 import { getAllUser } from '../../services/userService';
+import ModalUser from "./ModalUser"
 class UserManage extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            listUser: []
+            listUser: [],
+            isToggleShow: false
         }
     }
 
@@ -21,6 +23,24 @@ class UserManage extends Component {
         }
 
     }
+    handleAddNewUser = () => {
+        this.setState({
+            isToggleShow: !this.state.isToggleShow
+        })
+
+
+    }
+
+    toggle = () => {
+        this.setState({
+            isToggleShow: !this.state.isToggleShow
+        })
+
+
+    }
+
+
+
 
 
     render() {
@@ -28,17 +48,35 @@ class UserManage extends Component {
 
         return (
             <div className='user-container'>
+                <ModalUser
+                    isToggleShow={this.state.isToggleShow}
+                    toggle={this.toggle}
+                ></ModalUser>
+
                 <div className=" title text-center">User management</div>
-                <div className='user-table'>
+                <div className='user-table mx-4' >
+                    <div className='Add-new-user my-5'>
+                        <button
+
+                            onClick={() => { this.handleAddNewUser() }}
+                        >
+                            <i
+
+                                class="fas fa-plus"></i> Add New User
+                        </button>
+
+                    </div>
+
+
                     <table>
-                        <tr>
+                        <tr style={{ background: "#bb92c1", color: "white" }}>
                             <th>Email</th>
                             <th>First Name</th>
                             <th>Last Name</th>
                             <th>Address</th>
                             <th>Action</th>
                         </tr>
-                        {console.log(listUser)}
+
                         {listUser && listUser.map((item, index) => {
                             return (
                                 <>
