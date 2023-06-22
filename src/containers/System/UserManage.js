@@ -2,25 +2,23 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import "./usermanage.scss"
-import { getAllUser } from '../../services/userService';
+import { getAllUser, createNewUser, deleteUser } from '../../services/userService';
 import ModalUser from "./ModalUser"
+import { reject } from 'lodash';
+import _emitter from "../../utils/emitter"
 class UserManage extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
             listUser: [],
-            isToggleShow: false
+            isToggleShow: false,
+
         }
     }
 
     async componentDidMount() {
-        let response = await getAllUser('All')
-        if (response && response.errCode === 0) {
-            this.setState({
-                listUser: response.users
-            })
-        }
+        await this.getAllUserFromReact()
 
     }
     handleAddNewUser = () => {
@@ -31,6 +29,16 @@ class UserManage extends Component {
 
     }
 
+    getAllUserFromReact = async () => {
+        let response = await getAllUser('All')
+        if (response && response.errCode === 0) {
+            this.setState({
+                listUser: response.users
+            })
+        }
+    }
+
+
     toggle = () => {
         this.setState({
             isToggleShow: !this.state.isToggleShow
@@ -38,9 +46,48 @@ class UserManage extends Component {
 
 
     }
+    clearState = () => {
+        this.setState({
+
+        })
+    }
+
+
+    handleSendDataCreatUser = (data) => {
+
+        return new Promise(async (resolve, reject) => {
+
+            try {
+                let response = await createNewUser(data)
+                if (response.errCode === 1) {
+
+                    alert(response.message)
+
+
+                } else {
+                    this.getAllUserFromReact()
+                    this.toggle()
+                    _emitter.emit('EVENT_CLEAR_DATA')
+
+                }
 
 
 
+            } catch (e) {
+                reject(e)
+            }
+
+        })
+
+
+
+    }
+
+    handleDelete = async (data) => {
+        console.log(data.id)
+        await deleteUser(data.id)
+        this.getAllUserFromReact()
+    }
 
 
     render() {
@@ -51,6 +98,7 @@ class UserManage extends Component {
                 <ModalUser
                     isToggleShow={this.state.isToggleShow}
                     toggle={this.toggle}
+                    sendData={this.handleSendDataCreatUser}
                 ></ModalUser>
 
                 <div className=" title text-center">User management</div>
@@ -62,39 +110,43 @@ class UserManage extends Component {
                         >
                             <i
 
-                                class="fas fa-plus"></i> Add New User
+                                className="fas fa-plus"></i> Add New User
                         </button>
 
                     </div>
 
 
                     <table>
-                        <tr style={{ background: "#bb92c1", color: "white" }}>
-                            <th>Email</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Address</th>
-                            <th>Action</th>
-                        </tr>
+                        <tbody>
+                            <tr style={{ background: "#bb92c1", color: "white" }}>
+                                <th>Email</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Address</th>
+                                <th>Action</th>
+                            </tr>
 
-                        {listUser && listUser.map((item, index) => {
-                            return (
-                                <>
+                            {listUser && listUser.map((item, index) => {
+                                return (
+                                    <>
 
-                                    <tr>
-                                        <td>{item.email}</td>
-                                        <td>{item.firstName}</td>
-                                        <td>{item.lastName}</td>
-                                        <td>{item.address}</td>
-                                        <td>
-                                            <i style={{ padding: "4px", color: 'orange', cursor: 'pointer' }} class=" fas fa-edit"></i>
-                                            <i style={{ padding: "4px", color: 'red', cursor: 'pointer' }} class="fas fa-trash-alt"></i>
-                                        </td>
+                                        <tr key={index}>
+                                            <td>{item.email}</td>
+                                            <td>{item.firstName}</td>
+                                            <td>{item.lastName}</td>
+                                            <td>{item.address}</td>
+                                            <td>
+                                                <i style={{ padding: "4px", color: 'orange', cursor: 'pointer' }} className=" fas fa-edit"></i>
+                                                <i
+                                                    onClick={() => { this.handleDelete(item) }}
+                                                    style={{ padding: "4px", color: 'red', cursor: 'pointer' }} className="fas fa-trash-alt"></i>
+                                            </td>
 
-                                    </tr>
-                                </>
-                            )
-                        })}
+                                        </tr>
+                                    </>
+                                )
+                            })}
+                        </tbody>
                     </table>
                 </div>
 
