@@ -1,0 +1,206 @@
+.header-container {
+    background-color: white;
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 100%;
+    height: 65px;
+    color: black;
+
+
+    .logo-header {
+        display: flex;
+        // border: 1px solid black;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        width: 30%;
+
+        .logo-icon {
+            background: url("../../assets/images/logo.svg") center center no-repeat;
+            width: 50%;
+            height: 100%;
+            margin-left: 10px;
+
+        }
+
+        .logo-option {
+            font-size: 26px;
+            color: gray
+        }
+    }
+
+    .header-content {
+        // border: 1px solid black;
+        display: flex;
+        justify-content: center;
+
+        align-items: center;
+        width: 50%;
+
+        .content-banner {
+            padding: 0 10px;
+
+            .sub-title {
+                font-size: 12px;
+                color: gray;
+            }
+        }
+    }
+
+    .header-support {
+        // border: 1px solid black;
+        display: flex;
+        width: 20%;
+        justify-content: center;
+        align-items: center;
+
+        .support-color {
+            color: rgb(125, 200, 227);
+        }
+    }
+
+}
+
+
+
+
+.banner-container {
+    padding-top: 16px;
+
+    height: 800px;
+    background-size: contain;
+    width: 100vw;
+    background: url('../../assets/images/bookingcare-cover-4.jpg') no-repeat center content-box;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .banner-container-search {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0.1));
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        .banner-title {
+
+            width: 100%;
+            height: 100px;
+
+            display: flex;
+            margin: 0 auto;
+            text-align: center;
+            justify-content: center;
+            flex-direction: column;
+
+            .banner-tilte-sub {
+                font-size: 32px;
+
+                color: white;
+                text-shadow: 1px 1px 1px black;
+            }
+
+            .banner-title-main {
+                font-size: 32px;
+                font-weight: bold;
+                color: white;
+                text-shadow: 1px 1px 1px black;
+            }
+        }
+
+        .banner-search {
+
+
+            width: 100%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+            margin-top: 20px;
+
+
+            .wrapper-of-search {
+                margin: 0 auto;
+                width: 30%;
+                height: 50px;
+                border-radius: 25px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                background-color: #f7d800;
+
+                .search {
+                    margin-left: 16px;
+                    width: 20px;
+                    height: 20px;
+                    color: black;
+                }
+
+                .search-bar {
+                    width: 90%;
+                    height: 30px;
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                }
+            }
+        }
+
+
+
+
+    }
+
+
+
+    .banner-asset {
+
+        width: 100%;
+        display: flex;
+        height: 300px;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 100px;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 1));
+        ;
+
+        .wrapper-icon-asset {
+
+            width: 140px;
+
+            display: flex;
+            margin: 0 4px;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            height: 170px;
+
+            .wrapper-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 26px;
+                box-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+                color: rgb(115, 192, 211);
+                text-shadow: 1px 1px 1px black;
+                border-radius: 70px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+            }
+
+            .tilte-of-icon-asset {
+                text-align: center;
+                font-size: 16px;
+                font-weight: bold;
+            }
+        }
+
+    }
+}

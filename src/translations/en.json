@@ -1,4 +1,26 @@
 {
+    "homeheader": {
+        "speciality": "Speciality",
+        "searchdoctor": "Find a doctor by specialty",
+        "health-facilities": "Health facilities",
+        "choose-hospital-and-clinic": "choose hospital and clinic ",
+        "doctor": "Doctor",
+        "choose-doctor": "Find a good doctor ",
+        "examination-package": "Examination package",
+        "choose-examination-package": "Choose examination package",
+        "support": "Support :"
+    },
+    "banner": {
+        "title-banner": "COMPREHENSIVE HEALTH",
+        "title-banner-main": "CARE MEDICAL BACKGROUND",
+        "title0": "specialist examination",
+        "title1": "Remote examination",
+        "title2": "General examination",
+        "title3": " Medical test ",
+        "title4": "Surgery pack",
+        "title5": " Medical products ",
+        "title6": " Health test"
+    },
     "common": {
         "add": "Add",
         "edit": "Edit",
