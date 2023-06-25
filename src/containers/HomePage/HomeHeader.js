@@ -62,7 +62,7 @@ class HomeHeader extends Component {
 
                         </div>
 
-                        <div className='change-language'><span>Vi</span><>     </><span>En</span></div>
+                        <div className='change-language'><span>VI</span><>     </><span>EN</span></div>
                     </div>
 
 
