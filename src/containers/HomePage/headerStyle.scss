@@ -56,7 +56,12 @@
         width: 20%;
         justify-content: center;
         align-items: center;
-
+     .action{
+        color: rgb(91, 87, 87);
+     }
+     .non-action{
+        opacity: 0.3;
+     }
         .support-color {
             color: rgb(125, 200, 227);
         }
