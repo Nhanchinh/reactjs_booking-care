@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import HomeHeader from './HomeHeader';
+import Specialty from './Section/Specialty';
 class HomePage extends Component {
 
     state = {
@@ -16,7 +17,7 @@ class HomePage extends Component {
         return (
             <div >
                 <HomeHeader />
-
+                <Specialty/>
 
 
             </div>

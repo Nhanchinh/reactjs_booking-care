@@ -1,0 +1,32 @@
+.slick-prev, .slick-next {
+    // font-size: 17px;
+    // line-height: 14;
+    /* position: absolute; */
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.slick-next{
+    right: 0px;
+    border:1px blue solid;
+    z-index: 10000;
+    
+}
+.slick-prev{
+    left: 0px;
+    border:1px red solid;
+    z-index: 10000;
+    
+}
+.specialty-container{
+    width: 100vw;
+    height: 300px;
+}
