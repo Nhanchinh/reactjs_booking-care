@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./specialtyStyle.scss"
-class Specialty extends Component {
+class MedicalFacilities extends Component {
 
     state = {
 
@@ -25,11 +25,11 @@ class Specialty extends Component {
             slidesToScroll: 1
           };
         return (
-          <div className='specialty-wrapper'>
+          <div className='specialty-wrapper caro'>
 
             <div className=' sub-specialty-wrapper'>
           <div className='specialty-header'>
-            <span className='specailty-header-f1 fb'>Chuyên khoa phổ biến</span>
+            <span className='specailty-header-f1 fb'>Cơ sở y tế nổi bật</span>
             <span className='specailty-header-f2 bt'>Xem thêm</span>
           </div>
          
@@ -118,4 +118,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Specialty);
+export default connect(mapStateToProps, mapDispatchToProps)(MedicalFacilities);

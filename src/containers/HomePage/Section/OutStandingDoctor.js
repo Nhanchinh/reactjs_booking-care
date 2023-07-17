@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./specialtyStyle.scss"
-class Specialty extends Component {
+class OutStandingDoctor extends Component {
 
     state = {
 
@@ -29,7 +29,7 @@ class Specialty extends Component {
 
             <div className=' sub-specialty-wrapper'>
           <div className='specialty-header'>
-            <span className='specailty-header-f1 fb'>Chuyên khoa phổ biến</span>
+            <span className='specailty-header-f1 fb'>Bác sĩ nổi bật tuần qua</span>
             <span className='specailty-header-f2 bt'>Xem thêm</span>
           </div>
          
@@ -118,4 +118,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Specialty);
+export default connect(mapStateToProps, mapDispatchToProps)(OutStandingDoctor);

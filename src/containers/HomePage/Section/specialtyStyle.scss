@@ -4,29 +4,70 @@
     /* position: absolute; */
     top: 50%;
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     padding: 0;
     transform: translate(0, -50%);
     cursor: pointer;
-    color: transparent;
+    // color: transparent;
     border: none;
     outline: none;
-    background: transparent;
+    background: rgb(247, 245, 245);
+    &:hover{
+        background: rgb(180, 177, 177);
+    }
 }
 .slick-next{
     right: 0px;
-    border:1px blue solid;
+   
     z-index: 10000;
     
 }
 .slick-prev{
     left: 0px;
-    border:1px red solid;
+   
     z-index: 10000;
     
 }
-.specialty-container{
-    width: 100vw;
+.specialty-wrapper{
     height: 300px;
+   width: 100vw;
+   border-bottom: 3px solid #efeef5;
+display: flex;
+justify-content: center;
+   margin: 0 auto;
+   background: #f5f5f5;
+  position: relative;
+   .sub-specialty-wrapper{
+   position: absolute;
+   top: 10%;
+   }
+   .specialty-header{
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+   }
+}
+.specialty-container{
+    width: 90vw;
+    margin: 0 auto;
+   
+    margin-bottom: 50px;
+   .specialty-content{
+   
+    background: url('../../../assets/112457-co-xuong-khop.jpg') center center;
+    background-size: cover;
+    height: 160px;
+    width: 96% !important;
+    margin: 0 2px !important;
+    align-items: center;
+   }
+
+}
+.fb{
+    font-size:20px;
+  font-weight: bold;
+}
+.caro{
+    background-color: white !important;
 }

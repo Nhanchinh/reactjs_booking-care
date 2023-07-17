@@ -3,6 +3,8 @@ import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import HomeHeader from './HomeHeader';
 import Specialty from './Section/Specialty';
+import MedicalFacilities from './Section/MedicalFacilities';
+import OutStandingDoctor from './Section/OutStandingDoctor';
 class HomePage extends Component {
 
     state = {
@@ -18,7 +20,8 @@ class HomePage extends Component {
             <div >
                 <HomeHeader />
                 <Specialty/>
-
+                <MedicalFacilities/>
+                <OutStandingDoctor/>
 
             </div>
         )
