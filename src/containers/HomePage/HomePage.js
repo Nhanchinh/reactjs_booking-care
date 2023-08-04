@@ -5,6 +5,7 @@ import HomeHeader from './HomeHeader';
 import Specialty from './Section/Specialty';
 import MedicalFacilities from './Section/MedicalFacilities';
 import OutStandingDoctor from './Section/OutStandingDoctor';
+import Footer from './Section/Footer';
 class HomePage extends Component {
 
     state = {
@@ -22,13 +23,14 @@ class HomePage extends Component {
                 <Specialty/>
                 <MedicalFacilities/>
                 <OutStandingDoctor/>
+                <Footer/>
 
             </div>
         )
     }
 
 }
-
+   
 
 
 
